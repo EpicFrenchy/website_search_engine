@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="searchB">
+        <input id="searchInput" class="searchBox" type="text" value="" placeholder="Anything you desire...">
+        <button id="searchButton">Search</button>
+        <img class="search" src="https://lh3.googleusercontent.com/pw/AIL4fc_e-LOhOtbBJ-MM0lx2zzNwxpLa7xfRUFWgkwyHCLE7ZE6LcXjUOfSlsZf6U-e_CL8rXLTaTWCA12UZIPRUaRigA4gSm7hHfFG7ZQvq0qHHhnU5fBU=w2400">
+    </div>
+
+    <script>
+        let searchBox = document.querySelector('.searchBox')
+        let search = document.querySelector('.search')
+        search.onclick = function(){
+            if (searchBox.value === '') {
+
+            } else {
+                let url = 'https://www.google.com/search?q=' + searchBox.value;
+                window.open(url, '_self');
+            }
+        }
+    </script>
+</body>
+</html>
